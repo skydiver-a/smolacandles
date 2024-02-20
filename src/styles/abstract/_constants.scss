@@ -1,0 +1,32 @@
+// Colors
+$color-text-dark: #403F3D;
+$color-text-light: #E1D4C9;
+$color-text-accent: #B0907A;
+
+$color-background-body: #E1D4C9;
+$color-background-container: #665F55;
+$color-background-backdrop: rgba(64, 63, 61, .8);
+
+$color-border-dark: #665F55;
+$color-border-light: #C1B6AD;
+
+// Wrappers
+$desc-wrapper-width: 1440px;
+$desc-content-width: 1360px;
+
+// $middle-wrapper-width: 1024px;
+// $middle-content-width: 984px;
+
+$tablet-wrapper-width: 768px;
+$tablet-content-width: 688px;
+
+// $small-wrapper-width: 640px;
+// $small-content-width: 600px;
+
+$mobile-wrapper-width: 380px;
+$mobile-content-width: 348px;
+
+$slide-menu-width: 332px;
+
+$bounce-moving: 0.3s cubic-bezier(0.3, -0.1, 0.1, 1.1);
+$ease-moving: 0.8s cubic-bezier(0.5, -0.1, 0.1, 1);

@@ -1,0 +1,18 @@
+.section_title {
+  margin: 20px auto;
+
+  position: relative;
+}
+
+.section_title::after {
+  content: '';
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  border-bottom: 1px solid $color-black-light;
+}
