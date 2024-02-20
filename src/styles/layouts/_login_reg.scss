@@ -1,0 +1,94 @@
+.modal__content {      
+  margin: 20px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  & span {
+    @include fonts('Forum', normal, 400, 20px, 20px);
+    letter-spacing: .4px;
+  }
+
+  form {
+    max-width: 200px;
+    width: 100%;
+
+    .form_group {
+      input {
+        width: 200px;
+        height: 20px;
+        margin: 10px 0;
+
+        border: 1px solid $color-gold;
+
+        &.invalid {
+          background-color: $color-gold;
+        }
+      }
+
+      label {
+        @include fonts('Inter', normal, 400, 15px, 20px);
+        letter-spacing: .3px;
+      }
+    }
+
+    button {
+      margin: 10px 0;
+
+      &:disabled {
+        color: $color-gold;
+        border-color: $color-gold;
+        cursor: none;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .form_footer {
+      display: flex;
+      gap: 10px;
+
+      span {
+        @include fonts('Inter', normal, 400, 10px, 12px);
+        text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+      }
+
+      .link {
+        color: $color-black-light;
+        @include fonts('Inter', normal, 700, 10px, 12px);
+        letter-spacing: 1px;
+        text-decoration-line: underline;
+
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.fade-in {
+    animation: 1s fadeIn;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 1;
+    } to {
+      opacity: 0;
+    }
+  }
+
+  &.fade-out {
+    animation: 1s fadeOut;
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 0;
+    } to {
+      opacity: 1;
+    }
+  }
+}

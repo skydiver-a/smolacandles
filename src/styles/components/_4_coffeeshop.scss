@@ -1,0 +1,123 @@
+#coffeeshop .wrapper .wrapper-content {
+  flex-direction: column;
+
+  .coffeeshop {
+    width: 100%;
+    padding: 40px 0;
+
+    & span {
+      color: $color-black;
+      @include fonts('Inter', normal, 400, 20px, 40px);
+      letter-spacing: 2px;
+      
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+
+      @include media-tablet {
+        letter-spacing: 1.9px;
+      }
+      @include media-small {
+        letter-spacing: 1.5px;
+      }
+    }
+
+    .coffeeshop__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-top: 40px;
+
+      .coffeeshop__menu_drinkables,
+      .coffeeshop__menu_desserts {
+        & span {
+          color: $color-gold;
+          @include fonts('Forum', normal, 400, 40px, 40px);
+          letter-spacing: 2px;
+        }
+
+        gap: 40px;
+
+        .menu-items {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+
+          margin-top: 40px;
+
+          .menu-items__item {
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+
+            width: 100%;
+            vertical-align: center;
+
+            .menu-items__item_drink,
+            .menu-items__item_dessert {
+              color: $color-black;
+              @include fonts('Inter', normal, 400, 20px, 40px);
+              letter-spacing: 2px;
+            }
+
+            .menu-items__item_line {
+              width: 100px;
+              height: 1px;
+              background-color: $color-gold;
+              align-self: center;
+            }
+
+            .menu-items__item_price {
+              color: $color-black;
+              @include fonts('Forum', normal, 400, 20px, 40px);
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+
+      .coffeeshop__menu_drinkables {
+        & span {
+          text-align: left;
+        }
+        
+        & .menu-items {
+          & .menu-items__item .menu-items__item_drink {
+            width: 196px;
+            text-align: left;
+          }
+        }        
+      }
+
+      .coffeeshop__menu_desserts {
+        & span {
+          text-align: right;
+        }
+        
+        & .menu-items {
+          & .menu-items__item .menu-items__item_dessert {
+            width: 214px;
+            text-align: right;
+          }
+
+          @include media-tablet {
+            float: right;
+          }
+          @include media-small {
+            float: right;
+          }
+        }
+      }
+
+      @include media-tablet {
+        flex-direction: column;
+        gap: 40px;
+      }
+      @include media-small {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+  }
+}

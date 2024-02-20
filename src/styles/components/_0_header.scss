@@ -1,0 +1,145 @@
+header {
+  padding: 20px 0;
+}
+
+header .wrapper .wrapper-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 100px;
+  height: 60px;
+}
+
+.nav_wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  .header__nav {
+    flex: 1;
+
+    .header__nav_list {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+  
+      .nav-item {
+        a {
+          position: relative;
+        }
+  
+        a.nav-item_link {
+          color: $color-text-dark;
+        }
+  
+        a.nav-item_link::after {
+          content: '';
+  
+          position: absolute;
+          left: 0;
+  
+          display: inline-block;
+          height: 1.5em;
+          width: 100%;
+          border-bottom: 2px solid;
+  
+          opacity: 0;
+          transition: opacity 0.35s, transform 0.35s;
+          transform: scale(0,1);
+        }
+  
+        a.nav-item_link:hover::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      
+      @include media-tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        text-align: center;
+      }
+      @include media-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        text-align: center;
+      }
+    }
+
+    @include media-tablet {
+      position: absolute;
+      top: 90px;
+      right: -$slide-menu-width;
+
+      width: $slide-menu-width;
+      padding: 10px 107px 100px;
+      
+      transition: $ease-moving;
+      z-index: 5;
+
+      &.is_open {
+        right: 0;
+      }
+    }
+
+    @include media-mobile {
+      position: absolute;
+      top: 90px;
+      right: -$slide-menu-width;
+
+      width: $slide-menu-width;
+      padding: 10px 107px 100px;
+      
+      transition: $ease-moving;
+      z-index: 5;
+    
+      &.is_open {
+        right: 0;
+      }
+    }    
+  }
+
+  .header__menu_logo {
+    a.header__menu_link {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      gap: 8px;
+      color: $color-text-dark;
+      
+      &::after {
+        content: '';
+    
+        position: absolute;
+        left: 0;
+    
+        display: inline-block;
+        height: 1.5em;
+        width: 100%;
+        border-bottom: 2px solid;
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: scale(0,1);
+      }
+    
+      &:hover::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }  
+    
+    .header__menu_link-none {
+      display: flex;
+      gap: 8px;
+      color: $color-text-dark;
+      border-bottom: 2px solid;
+    }
+  }
+}

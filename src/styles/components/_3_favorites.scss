@@ -1,0 +1,186 @@
+#favorites .wrapper .wrapper-content {
+  flex-direction: column;
+
+  .favorites {
+    width: 100%;
+    padding: 40px 0;
+
+    & span {
+      color: $color-black;
+      @include fonts('Inter', bold, 700, 20px, 28px);
+    }
+
+    .favorites__season {
+      padding: 40px 0;
+
+      display: flex;
+      gap: 90px;
+
+      .container {
+        position: relative;
+        padding-left: 40px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 99px;
+        }
+
+        &:nth-child(3) {
+          width: 116px;
+        }
+
+        &:nth-child(4) {
+          width: 111px;
+        }
+        
+        input {
+          position: absolute;
+          top: 50%;
+          left: calc(50% + 2.5px);
+          transform: translate(calc(-50% + .5px), -50%);
+
+          width: calc(100% + 10px);
+          height: calc(100% + 10px);
+          
+          z-index: 5;
+          opacity: 0;
+        }
+
+        label {          
+          color: $color-black;
+          @include fonts('Inter', normal, 400, 20px, 20px); 
+        }
+
+        input, label {
+          cursor: pointer;
+        }
+
+        input[type="radio"]:checked + label {
+          @include fonts('Inter', bold, 700, 20px, 20px);
+        } 
+
+        input[type="radio"]:checked,
+        label {
+          cursor: auto;
+        }
+
+        & .checkmark {
+          position: absolute;
+          top: 2px;
+          left: 3px;
+          
+          height: 17px;
+          width: 17px;
+          border-radius: 50%;
+          border: 2px solid $color-black;
+        }
+
+        &.checkmark::before {
+          content: '';
+          position: absolute;  
+        }
+
+        & input:checked ~ .checkmark::before {
+          content: '';
+          position: absolute;
+          bottom: 3px;
+          left: 3px;
+      
+          height: 7px;
+          width: 7px;
+          border-radius: 50%;
+          background-color: $color-black;      
+        }
+      
+        &:hover input:not(:checked) ~ .checkmark {
+          background-color: $color-gray;
+        }
+      }
+
+      @include media-small {
+        gap: 55px;
+      }
+    }
+
+    .favorites__items {
+      display: grid;
+      grid-template-columns: repeat(2, 550px);
+      grid-template-rows: repeat(2, 555px);
+      gap: 40px 260px;
+
+      .favorites__items_item {
+        border: 1px solid $color-black;
+        padding: 15px 170px 13px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+
+        & img {
+          position: absolute;
+          bottom: -1px;
+          left: 390px;
+
+          width: 200px;
+          height: 300px;
+        }
+
+        .item-title {
+          position: relative;
+
+          &::after {
+            content: '';
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            display: inline-block;
+            width: 60px;
+            border-bottom: 1px solid $color-gold;
+          }
+
+          & span {
+            color: $color-black;
+            @include fonts('Forum', normal, 400, 20px, 40px);
+            letter-spacing: 2px;
+          }
+        }
+
+        .item-book span {
+          color: $color-black;
+          @include fonts('Inter', bold, 700, 15px, 40px);
+          letter-spacing: 2px;
+        }
+
+        & span {
+          padding-top: 20px;
+        }
+
+        .item-desc {
+          color: $color-black;
+          @include fonts('Inter', normal, 400, 15px, 40px);
+          letter-spacing: 2px;
+        }
+      }
+
+      @include media-middle {
+        margin-left: 197px;
+        grid-template-columns: 550px;
+        grid-template-rows: repeat(4, 555px);        
+      }
+      @include media-tablet {
+        margin-left: 69px;
+        grid-template-columns: 550px;
+        grid-template-rows: repeat(4, 555px);
+      }
+      @include media-small {
+        margin-left: 5px;
+        grid-template-columns: 550px;
+        grid-template-rows: repeat(4, 555px);
+      }
+    }
+  }
+}
+

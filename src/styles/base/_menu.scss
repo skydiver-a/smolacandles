@@ -1,0 +1,50 @@
+.header__menu_logo {
+  display: flex;
+  gap: 8px;
+
+  span {
+    color: $color-text-dark;
+    @include fonts('Inter', normal, 600, 16px, 150%);
+  }
+}
+
+.header__menu {
+    width: 45px;
+    height: 22px;
+  
+    position: relative;
+    z-index: 5;
+    cursor: pointer;    
+  
+    .menu_bar {
+      height: 2px;
+    }
+  
+    @include media-desctop {
+      display: none;
+    }
+    @include media-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    &.is_active {
+      .menu_bar:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+        transition: $ease-moving;
+      }
+      .menu_bar:nth-child(2) {
+        display: none;
+      }
+      .menu_bar:nth-child(3) {
+        transform: rotate(-45deg) translate(-2px, 0px);
+        transition: $ease-moving;
+      }
+    }
+}

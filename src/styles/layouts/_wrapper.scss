@@ -1,0 +1,49 @@
+header,
+section,
+footer {
+  display: flex;
+  justify-content: center;
+
+  @include media-desctop {
+      .wrapper {
+        width: $desc-wrapper-width;
+      }
+  }
+  @include media-tablet {
+    .wrapper {
+      width: $tablet-wrapper-width;
+    }
+  }
+  @include media-mobile {
+    .wrapper {
+      width: $mobile-wrapper-width;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-desctop {
+    .wrapper-content {
+      width: $desc-content-width;
+    }
+  }
+  @include media-tablet {
+    .wrapper-content {
+      width: $tablet-content-width;
+    }
+  }
+  @include media-mobile {
+    .wrapper-content {
+      width: $mobile-content-width;
+    }
+  }
+}
+
+.wrapper-content {
+  display: flex;
+  align-items: center;
+}
