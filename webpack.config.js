@@ -21,7 +21,7 @@ module.exports = (env, options) => {
           .split('/')
           .slice(1)
           .join('/');
-        return `${filepath}/[name].[ext]`;
+        return `${filepath}/[name][ext]`;
       },
     },
     plugins: [

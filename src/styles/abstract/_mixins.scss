@@ -14,7 +14,12 @@
     flex-basis: $width;
   }
 }
-
+/* Large screens */
+@mixin media-large-screen {
+  @media only screen  and (min-width: $large-screen-wrapper-width) {
+    @content;
+  }
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
@@ -59,10 +64,7 @@
   /* Styles */
   }
   
-  /* Large screens ----------- */
-  @media only screen  and (min-width : 1824px) {
-  /* Styles */
-  }
+  
   
   /* iPhone 4 ----------- */
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
@@ -127,11 +129,7 @@
   /* Styles */
   }
   
-@mixin media-desctop {
-  @media (min-width: $desc-wrapper-width) {
-    @content;
-  }
-}
+/*
 
 @mixin media-tablet {
   @media (max-width: calc($desc-wrapper-width - 1px)) and (min-width: $tablet-wrapper-width) {
@@ -143,4 +141,4 @@
   @media (max-width: calc($tablet-wrapper-width - 1px)) and (min-width: $mobile-wrapper-width) {
     @content;
   }
-}
+}*/

@@ -4,11 +4,12 @@ footer {
   display: flex;
   justify-content: center;
 
-  @include media-desctop {
-      .wrapper {
-        width: $desc-wrapper-width;
-      }
+  @include media-large-screen {
+    .wrapper {
+      width: $large-screen-wrapper-width;
+    }
   }
+  /*
   @include media-tablet {
     .wrapper {
       width: $tablet-wrapper-width;
@@ -18,7 +19,7 @@ footer {
     .wrapper {
       width: $mobile-wrapper-width;
     }
-  }
+  }*/
 }
 
 .wrapper {
@@ -26,11 +27,12 @@ footer {
   justify-content: center;
   align-items: center;
 
-  @include media-desctop {
+  @include media-large-screen {
     .wrapper-content {
-      width: $desc-content-width;
+      width: $large-screen-content-width;
     }
   }
+  /*
   @include media-tablet {
     .wrapper-content {
       width: $tablet-content-width;
@@ -40,7 +42,7 @@ footer {
     .wrapper-content {
       width: $mobile-content-width;
     }
-  }
+  }*/
 }
 
 .wrapper-content {
