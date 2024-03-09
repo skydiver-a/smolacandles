@@ -41,17 +41,17 @@ a {
   text-decoration: none;
   @extend %transition;
 }
-/*
+
 h1 {
   @include fonts('Inter', normal, 600, 72px, 105%);
 
   & span.accent {
     font-style: italic;
   }
-
+/*
   @include media-mobile {
     @include fonts('Inter', normal, 600, 42px, 115%);
-  }
+  }*/
 }
 
 h2 {
@@ -60,12 +60,12 @@ h2 {
   & span.accent {
     font-style: italic;
   }
-
+/*
   @include media-mobile {
     @include fonts('Inter', normal, 600, 32px, 125%);
-  }
+  }*/
 }
-
+/*
 h3 {
   @include fonts('Inter', normal, 600, 24px, 125%);
 
@@ -81,11 +81,11 @@ h3 {
 .caption {
   @include fonts('Inter', normal, 600, 10px, 140%);
 }
-
+*/
 .link-and-button {
   @include fonts('Inter', normal, 600, 16px, 150%);
 }
-
+/*
 .burger-link {
   @include fonts('Inter', normal, 600, 32px, 125%);
 }
