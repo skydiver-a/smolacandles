@@ -1,5 +1,24 @@
-#favorite .wrapper .wrapper-content {
+.about {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("assets/images/1000034754-01.jpeg");
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),url(assets/images/1000034754-01.jpeg);
+  background: -webkit-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("assets/images/1000034754-01.jpeg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("assets/images/1000034754-01.jpeg");
+  background: linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("assets/images/1000034754-01.jpeg");
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about .wrapper .wrapper-content {
   flex-direction: column;
+
+  & .section_title h2 {
+    color: $color-text-accent;
+
+    & span {
+      color: $color-text-light;
+    }
+  }
 /*
   .about {
     padding: 40px 0 36px 0;

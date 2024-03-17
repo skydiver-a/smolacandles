@@ -56,32 +56,34 @@ h1 {
 
 h2 {
   @include fonts('Inter', normal, 600, 60px, 125%);
-
+  color: $color-text-dark;
   & span.accent {
     font-style: italic;
+    color: $color-text-accent;
   }
 /*
   @include media-mobile {
     @include fonts('Inter', normal, 600, 32px, 125%);
   }*/
 }
-/*
-h3 {
-  @include fonts('Inter', normal, 600, 24px, 125%);
 
+h3 {
+  @include fonts('Inter', normal, 600, 36px, 125%);
+  color: $color-text-accent;
   & span.accent {
     font-style: italic;
+    color: $color-text-dark;
   }
 }
 
 .medium {
-  @include fonts('Inter', normal, 400, 16px, 150%);
+  @include fonts('Inter', normal, 400, 24px, 150%);
 }
 
 .caption {
-  @include fonts('Inter', normal, 600, 10px, 140%);
+  @include fonts('Inter', normal, 600, 20px, 140%);
 }
-*/
+
 .link-and-button {
   @include fonts('Inter', normal, 600, 16px, 150%);
 }
