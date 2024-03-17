@@ -470,6 +470,7 @@ header .wrapper .wrapper-content {
 }
 
 #about .wrapper .wrapper-content {
+  margin: 0 0 20px;
   flex-direction: column;
   /*
     .about {
@@ -707,6 +708,17 @@ header .wrapper .wrapper-content {
   color: #B0907A;
 }
 #about .wrapper .wrapper-content .section_title h2 span {
+  color: #E1D4C9;
+}
+#about .wrapper .wrapper-content .section_line {
+  width: 160px;
+  height: 3px;
+  background-color: #C1B6AD;
+}
+#about .wrapper .wrapper-content p {
+  margin: 20px 350px;
+  text-indent: 36px;
+  text-align: justify;
   color: #E1D4C9;
 }
 
