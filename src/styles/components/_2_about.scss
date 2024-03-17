@@ -10,6 +10,7 @@
 }
 
 #about .wrapper .wrapper-content {
+  margin: 0 0 20px;
   flex-direction: column;
 
   & .section_title h2 {
@@ -18,6 +19,19 @@
     & span {
       color: $color-text-light;
     }
+  }
+
+  .section_line {
+    width: 160px;
+    height: 3px;
+    background-color: $color-border-light;
+  }
+
+  p {
+    margin: 20px 350px;
+    text-indent: 36px;
+    text-align: justify;
+    color: $color-text-light;
   }
 /*
   .about {
