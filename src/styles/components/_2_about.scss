@@ -4,9 +4,13 @@
   background: -webkit-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("assets/images/1000034754-01.jpeg");
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("assets/images/1000034754-01.jpeg");
   background: linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("assets/images/1000034754-01.jpeg");
-  background-position: 50% 15%;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #about .wrapper .wrapper-content {
