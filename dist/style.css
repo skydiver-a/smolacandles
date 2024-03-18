@@ -464,9 +464,13 @@ header .wrapper .wrapper-content {
   background: -webkit-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(assets/images/1000034754-01.jpeg);
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(assets/images/1000034754-01.jpeg);
   background: linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(assets/images/1000034754-01.jpeg);
-  background-position: 50% 15%;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #about .wrapper .wrapper-content {
@@ -720,6 +724,39 @@ header .wrapper .wrapper-content {
   text-indent: 36px;
   text-align: justify;
   color: #E1D4C9;
+}
+
+.howitworks .wrapper .wrapper-content {
+  flex-direction: column;
+}
+.howitworks .wrapper .wrapper-content .section_line {
+  width: 160px;
+  height: 3px;
+  background-color: #665F55;
+}
+.howitworks .wrapper .wrapper-content p {
+  margin: 20px 350px 10px;
+  text-indent: 36px;
+  text-align: justify;
+}
+.howitworks .wrapper .wrapper-content .howitworks__grid {
+  margin: 20px 0;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.howitworks .wrapper .wrapper-content .howitworks__grid .howitworks__grid_figure {
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 1/1;
+}
+.howitworks .wrapper .wrapper-content .howitworks__grid .howitworks__grid_figure img {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 header,
