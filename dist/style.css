@@ -728,6 +728,7 @@ header .wrapper .wrapper-content {
 
 .howitworks .wrapper .wrapper-content {
   flex-direction: column;
+  margin: 20px 0 60px;
 }
 .howitworks .wrapper .wrapper-content .section_line {
   width: 160px;
@@ -757,6 +758,43 @@ header .wrapper .wrapper-content {
   background-position: center center;
   object-fit: cover;
   background-repeat: no-repeat;
+}
+
+.secret {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(assets/images/secret.jpg);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(assets/images/secret.jpg);
+  background: -webkit-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(assets/images/secret.jpg);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(assets/images/secret.jpg);
+  background: linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(assets/images/secret.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.secret .wrapper .wrapper-content {
+  margin: 0 0 40px;
+  flex-direction: column;
+}
+.secret .wrapper .wrapper-content .section_title h2 {
+  color: #B0907A;
+}
+.secret .wrapper .wrapper-content .section_title h2 span {
+  color: #E1D4C9;
+}
+.secret .wrapper .wrapper-content .section_line {
+  width: 160px;
+  height: 3px;
+  background-color: #C1B6AD;
+}
+.secret .wrapper .wrapper-content p {
+  margin: 20px 350px;
+  text-indent: 36px;
+  text-align: justify;
+  color: #E1D4C9;
 }
 
 header,
