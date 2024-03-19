@@ -237,7 +237,7 @@ h3 span.accent {
 }
 .btn__icon-logo {
   position: absolute;
-  right: 60px;
+  right: 55px;
   display: inline-block;
   margin-left: 8px;
   transform: scale(0);
@@ -248,7 +248,7 @@ h3 span.accent {
   height: 20px;
 }
 .btn:hover {
-  padding-right: 60px;
+  padding-right: 55px;
 }
 .btn:hover .btn__icon-logo {
   transform: scale(1);
